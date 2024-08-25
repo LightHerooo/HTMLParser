@@ -1,17 +1,8 @@
-package htmlparser.consoleframes.content.html;
+package ru.herooo.projects.htmlparser.consoleframes.content.html;
 
-import htmlparser.consoleframes.ConsoleFrameHTMLParserAbstract;
+import ru.herooo.projects.htmlparser.consoleframes.ConsoleFrameHTMLParserAbstract;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ConsoleFrameParseHTML extends ConsoleFrameHTMLParserAbstract {
     private Document document;

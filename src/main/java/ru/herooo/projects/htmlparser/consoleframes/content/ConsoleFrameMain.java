@@ -1,6 +1,6 @@
-package htmlparser.consoleframes.content;
+package ru.herooo.projects.htmlparser.consoleframes.content;
 
-import htmlparser.consoleframes.ConsoleFrameHTMLParserAbstract;
+import ru.herooo.projects.htmlparser.consoleframes.ConsoleFrameHTMLParserAbstract;
 import ru.herooo.libs.easyconsole.consoleframe.ConsoleFrameAbstract;
 
 public class ConsoleFrameMain extends ConsoleFrameHTMLParserAbstract {

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.herooo.consoleapps</groupId>
+    <groupId>ru.herooo.projects</groupId>
     <artifactId>html-parser</artifactId>
     <version>1.0</version>
 
@@ -37,7 +37,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>htmlparser.HtmlParser</mainClass>
+                            <mainClass>ru.herooo.projects.htmlparser.HtmlParser</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

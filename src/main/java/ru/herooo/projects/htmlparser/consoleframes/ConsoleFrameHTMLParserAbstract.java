@@ -1,4 +1,4 @@
-package htmlparser.consoleframes;
+package ru.herooo.projects.htmlparser.consoleframes;
 
 import ru.herooo.libs.easyconsole.consoleframe.ConsoleFrameAbstract;
 
