@@ -29,6 +29,7 @@ public class ConsoleFrameParseByURL extends ConsoleFrameHTMLParserAbstract {
                         .get();
             } catch (IOException | IllegalArgumentException e) {
                 printError("Произошла ошибка подключения", e);
+                continue;
             }
 
             new ConsoleFrameParseHTML(document).printContent();
