@@ -35,8 +35,8 @@ public class ConsoleFrameParseElements extends ConsoleFrameHTMLParserAbstract {
 
             System.out.println("Выберите, что нужно сохранить в файл:");
             Map<Integer, String> menuMap = new HashMap<>();
-            menuMap.put(1, "Оставить всё как есть");
-            menuMap.put(2, "Сохранить внутренние теги + текст");
+            menuMap.put(1, "Сохранить всё");
+            menuMap.put(2, "Сохранить содержимое найденных тегов");
             menuMap.put(3, "Сохранить внутренний текст");
             menuMap.put(4, "Сохранить значения атрибута найдённого тега");
             printMenu(menuMap, "Отмена", true, true);
@@ -100,7 +100,7 @@ public class ConsoleFrameParseElements extends ConsoleFrameHTMLParserAbstract {
 
     private File parseText(Elements elements) throws IOException {
         File file = createNewParseResultFile();
-        try (FileWriter fw = new FileWriter(createNewParseResultFile())) {
+        try (FileWriter fw = new FileWriter(file)) {
             for (Element element: elements) {
                 fw.write(element.text() + "\n");
             }
@@ -111,7 +111,7 @@ public class ConsoleFrameParseElements extends ConsoleFrameHTMLParserAbstract {
 
     private File parseAttribute(Elements elements, String attribute) throws IOException {
         File file = createNewParseResultFile();
-        try (FileWriter fw = new FileWriter(createNewParseResultFile())) {
+        try (FileWriter fw = new FileWriter(file)) {
             for (Element element: elements) {
                 fw.write(element.attr(attribute) + "\n");
             }
@@ -121,12 +121,12 @@ public class ConsoleFrameParseElements extends ConsoleFrameHTMLParserAbstract {
     }
 
     private File createNewParseResultFile() throws IOException {
-        File directory = new File("parse_results");
+        File directory = new File("results");
         if (!directory.exists()) {
             directory.mkdirs();
         }
 
-        File parseResultFile = new File(String.format("%s/parse_result_%s.txt",
+        File parseResultFile = new File(String.format("%s/result_%s.txt",
                 directory.getPath(),
                 new SimpleDateFormat("dd_MM_yyyy__hh_mm_ss").format(new Date())));
         parseResultFile.createNewFile();
