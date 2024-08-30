@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class ConsoleFrameParseByURL extends ConsoleFrameHTMLParserAbstract {
     public ConsoleFrameParseByURL() {
-        super("Парсинг через ссылку на сайт");
+        super("Парсинг через URL");
     }
 
     @Override
@@ -18,7 +18,7 @@ public class ConsoleFrameParseByURL extends ConsoleFrameHTMLParserAbstract {
             clear();
             printHeader();
 
-            String url = CONSOLE_SCANNER.waitString("Введите адрес сайта (0, чтобы отменить)");
+            String url = CONSOLE_SCANNER.waitString("Введите URL сайта (0, чтобы отменить)");
             if (url.equals("0")) break;
 
             Document document = null;
