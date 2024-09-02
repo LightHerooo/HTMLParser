@@ -1,4 +1,4 @@
-package ru.herooo.projects.htmlparser.consoleframes.content.html;
+package ru.herooo.projects.htmlparser.consoleframes.content.parse;
 
 import ru.herooo.projects.htmlparser.consoleframes.ConsoleFrameHTMLParserAbstract;
 import org.jsoup.nodes.Document;

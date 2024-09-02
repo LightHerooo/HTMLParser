@@ -1,7 +1,7 @@
 package ru.herooo.projects.htmlparser.consoleframes.content;
 
 import ru.herooo.projects.htmlparser.consoleframes.ConsoleFrameHTMLParserAbstract;
-import ru.herooo.projects.htmlparser.consoleframes.content.html.ConsoleFrameParseHTML;
+import ru.herooo.projects.htmlparser.consoleframes.content.parse.ConsoleFrameParseHTML;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 

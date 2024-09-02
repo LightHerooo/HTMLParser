@@ -1,4 +1,4 @@
-package ru.herooo.projects.htmlparser.consoleframes.content.html;
+package ru.herooo.projects.htmlparser.consoleframes.content.parse;
 
 import ru.herooo.projects.htmlparser.consoleframes.ConsoleFrameHTMLParserAbstract;
 import org.jsoup.nodes.Element;
@@ -41,7 +41,7 @@ public class ConsoleFrameParseElements extends ConsoleFrameHTMLParserAbstract {
             menuMap.put(4, "Сохранить значения атрибута найдённого тега");
             printMenu(menuMap, "Отмена", true, true);
 
-            int choice = CONSOLE_SCANNER.waitInt();
+            int choice = CONSOLE_SCANNER.waitChoice();
             if (choice == 0) break;
             printDelimiter();
 
