@@ -48,22 +48,22 @@ public class ConsoleFrameParseElements extends ConsoleFrameHTMLParserAbstract {
             try {
                 File file = null;
                 if (choice == 1) {
-                    file = parse(elements);
+                    file = parseAll(elements);
                 } else if (choice == 2) {
-                    file = parseHTML(elements);
+                    file = parseTagValues(elements);
                 } else if (choice == 3) {
-                    file = parseText(elements);
+                    file = parseTagText(elements);
                 } else if (choice == 4) {
                     String attribute = CONSOLE_SCANNER.waitString("Введите атрибут (0, чтобы отменить)");
                     if (attribute.equals("0")) break;
                     printDelimiter();
 
-                    file = parseAttribute(elements, attribute);
+                    file = parseTagAttribute(elements, attribute);
                 }
 
                 if (file != null) {
                     System.out.println("Парсинг успешно завершён!");
-                    System.out.printf("Путь к файлу: %s\n", file.getPath());
+                    System.out.printf("Путь к файлу: %s\n", file.getAbsolutePath());
                     printDelimiter();
 
                     CONSOLE_SCANNER.waitEnter();
@@ -76,7 +76,7 @@ public class ConsoleFrameParseElements extends ConsoleFrameHTMLParserAbstract {
         }
     }
 
-    private File parse(Elements elements) throws IOException {
+    private File parseAll(Elements elements) throws IOException {
         File file = createNewParseResultFile();
         try (FileWriter fw = new FileWriter(file)) {
             for (Element element: elements) {
@@ -87,7 +87,7 @@ public class ConsoleFrameParseElements extends ConsoleFrameHTMLParserAbstract {
         return file;
     }
 
-    private File parseHTML(Elements elements) throws IOException {
+    private File parseTagValues(Elements elements) throws IOException {
         File file = createNewParseResultFile();
         try (FileWriter fw = new FileWriter(file)) {
             for (Element element: elements) {
@@ -98,7 +98,7 @@ public class ConsoleFrameParseElements extends ConsoleFrameHTMLParserAbstract {
         return file;
     }
 
-    private File parseText(Elements elements) throws IOException {
+    private File parseTagText(Elements elements) throws IOException {
         File file = createNewParseResultFile();
         try (FileWriter fw = new FileWriter(file)) {
             for (Element element: elements) {
@@ -109,7 +109,7 @@ public class ConsoleFrameParseElements extends ConsoleFrameHTMLParserAbstract {
         return file;
     }
 
-    private File parseAttribute(Elements elements, String attribute) throws IOException {
+    private File parseTagAttribute(Elements elements, String attribute) throws IOException {
         File file = createNewParseResultFile();
         try (FileWriter fw = new FileWriter(file)) {
             for (Element element: elements) {
