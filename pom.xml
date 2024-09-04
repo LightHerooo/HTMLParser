@@ -6,7 +6,7 @@
 
     <groupId>ru.herooo.projects</groupId>
     <artifactId>html-parser</artifactId>
-    <version>1.0</version>
+    <version>1.0.3</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -18,7 +18,7 @@
         <dependency>
             <groupId>ru.herooo.libs</groupId>
             <artifactId>easy-console</artifactId>
-            <version>1.0</version>
+            <version>1.0.5</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
         <dependency>
@@ -29,7 +29,7 @@
     </dependencies>
 
     <build>
-        <finalName>HTMLParser</finalName>
+        <finalName>HTMLParser (${version})</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
