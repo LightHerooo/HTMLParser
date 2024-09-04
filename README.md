@@ -4,10 +4,10 @@
 ## Стэк
 - Java 21 ([JDK](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html))
 - JSoup 1.17.1 ([Сайт](https://jsoup.org/) | [Git](https://github.com/jhy/jsoup) | [Maven](https://mvnrepository.com/artifact/org.jsoup/jsoup/1.17.1))
-- EasyConsole 1.0 ([Git](https://github.com/LightHerooo/EasyConsole))
+- EasyConsole 1.0.5 ([Git](https://github.com/LightHerooo/EasyConsole))
 
 ## Установка
-1. Скачайте [ZIP](https://disk.yandex.ru/d/NZgVQfN43m2CvA)
+1. Скачайте [ZIP](https://disk.yandex.ru/d/BdDnqEerUh3xjQ)
 2. Распакуйте архив
 
 ## Использование
